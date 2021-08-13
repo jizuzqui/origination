@@ -1,0 +1,90 @@
+[
+
+    [
+    	"name" : "proposeSolutions",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"displayName" : "Propose Solutions",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "calculateCreditRiskDecision",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"displayName" : "Calculate Credit Risk Decision",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "calculateComplianceDecision",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"displayName" : "Calculate Compliance Decision",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "calculateBusinessDecision",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"results": [
+    	    "Result" : new ObjectDataType()
+    	],
+    	"displayName" : "Calculate Business Decision",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "manageDocument",
+    	"parameters" : [
+    			"correlationId" : new StringDataType(),
+    			"documentType" : new StringDataType()
+    	],
+    	"displayName" : "Manage Documents",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "checkRepresentationClassStatus",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"displayName" : "Check Representation Class Status",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "compensateTask",
+    	"parameters" : [
+    			"correlationId" : new StringDataType(),
+    			"taskName" : new StringDataType(),
+    			"stateTo" : new StringDataType()
+    	],
+    	"displayName" : "Compensate Task",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    
+    [
+    	"name" : "manageSigningInformation",
+    	"parameters" : [
+    			"correlationId" : new StringDataType(),
+    			"bundleState" : new ObjectDataType(),
+    			"bundleLastUpdateTime" : new StringDataType()
+    	],
+    	"displayName" : "Manage Signing Information",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ],
+    [
+    	"name" : "provideContractualDocuments",
+    	"parameters" : [
+    			"correlationId" : new StringDataType()
+    	],
+    	"displayName" : "Provide Contractual Documents",
+    	"icon" : "../../../../../../../../../global/defaultservicenodeicon.png"
+    ]
+]
