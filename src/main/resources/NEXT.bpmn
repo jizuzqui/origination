@@ -14,8 +14,8 @@
   <bpmn2:itemDefinition id="_nrOfSolutionsItem" structureRef="Integer"/>
   <bpmn2:itemDefinition id="_isOfferSignedItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="_correlationIdItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="_decisionOutputItem" structureRef="belfius.gejb.processorchestrator.openapi.client.model.DecisionResource"/>
-  <bpmn2:itemDefinition id="_bundleStateItem" structureRef="belfius.gejb.processorchestrator.openapi.client.model.CodeValue"/>
+  <bpmn2:itemDefinition id="_decisionOutputItem" structureRef="belfius.gejb.processorchestrator.openapi.model.DecisionResource"/>
+  <bpmn2:itemDefinition id="_bundleStateItem" structureRef="belfius.gejb.processorchestrator.openapi.model.CodeValue"/>
   <bpmn2:itemDefinition id="_bundleLastUpdateTimeItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_fromTaskNameItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__8A167501-70C6-4741-A000-999838D29A4F_correlationIdInputXItem" structureRef="String"/>
@@ -68,7 +68,7 @@
   <bpmn2:itemDefinition id="__C092794C-C4A9-4728-91CA-81A3D3401230_bundleStateInputXItem" structureRef="java.lang.Object"/>
   <bpmn2:itemDefinition id="__C092794C-C4A9-4728-91CA-81A3D3401230_correlationIdInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__8379A8C0-971A-4344-B6AF-F07DC447D060_correlationIdInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputXItem" structureRef="belfius.gejb.processorchestrator.openapi.client.model.DecisionResource"/>
+  <bpmn2:itemDefinition id="__8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputXItem" structureRef="belfius.gejb.processorchestrator.openapi.model.DecisionResource"/>
   <bpmn2:itemDefinition id="__B0A8A2DE-6807-46C7-91F8-0877CD24016C_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__B0A8A2DE-6807-46C7-91F8-0877CD24016C_PriorityInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__B0A8A2DE-6807-46C7-91F8-0877CD24016C_CommentInputXItem" structureRef="Object"/>
@@ -258,7 +258,7 @@
           <drools:metaValue><![CDATA[Digital signing]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm25sOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[return ((belfius.gejb.processorchestrator.openapi.client.model.CodeValue)kcontext.getVariable("bundleState")).getCodeId().equals("03");]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm25sOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[return ((belfius.gejb.processorchestrator.openapi.model.CodeValue)kcontext.getVariable("bundleState")).getCodeId().equals("03");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_6FCDD14D-B10D-4DFB-B6E2-5A92529E3C6F" sourceRef="_C092794C-C4A9-4728-91CA-81A3D3401230" targetRef="_0DF33F99-B251-4E8D-8222-2E810D17CD82">
       <bpmn2:extensionElements>
@@ -312,14 +312,14 @@
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm258OMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.client.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.client.model.DecisionResource)kcontext.getVariable("decisionOutput");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm258OMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.model.DecisionResource)kcontext.getVariable("decisionOutput");
 
 String codeId = decisionResource.getDecision().getLoanGrantingBusinessDecision().getResult().getCodeId();
 
 return codeId.equals("AUTOMATIC_REFUSAL");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_8E7D3287-2F38-4188-8403-A619551CD04D" sourceRef="_7F903AF6-FFA7-43AA-ADA5-814267029305" targetRef="_41AA0437-85D7-4044-ADD7-92C145A36461">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm26MOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.client.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.client.model.DecisionResource)kcontext.getVariable("decisionOutput");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm26MOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.model.DecisionResource)kcontext.getVariable("decisionOutput");
 
 String codeId = decisionResource.getDecision().getLoanGrantingBusinessDecision().getResult().getCodeId();
 
@@ -331,7 +331,7 @@ return codeId.equals("NO_AUTOMATICDECISION");]]></bpmn2:conditionExpression>
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm26cOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.client.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.client.model.DecisionResource)kcontext.getVariable("decisionOutput");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm26cOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[belfius.gejb.processorchestrator.openapi.model.DecisionResource decisionResource =  (belfius.gejb.processorchestrator.openapi.model.DecisionResource)kcontext.getVariable("decisionOutput");
 
 String codeId = decisionResource.getDecision().getLoanGrantingBusinessDecision().getResult().getCodeId();
 
@@ -487,7 +487,7 @@ return codeId.equals("AUTOMATIC_APPROVAL");]]></bpmn2:conditionExpression>
           <drools:metaValue><![CDATA[Manual signing]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm28MOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[return ((belfius.gejb.processorchestrator.openapi.client.model.CodeValue)kcontext.getVariable("bundleState")).getCodeId().equals("10");]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_uKm28MOMEeubP5UebuODeQ" language="http://www.java.com/java"><![CDATA[return ((belfius.gejb.processorchestrator.openapi.model.CodeValue)kcontext.getVariable("bundleState")).getCodeId().equals("10");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_1F97C053-06F8-4E4F-97EB-D7EF6C471763" sourceRef="_5FD8570D-2841-405C-A461-D31C5F11360F" targetRef="_2CB2572B-CDFA-406E-8C41-8EA17ACDF5ED">
       <bpmn2:extensionElements>
@@ -734,7 +734,7 @@ return codeId.equals("AUTOMATIC_APPROVAL");]]></bpmn2:conditionExpression>
       <bpmn2:ioSpecification id="_uKneCMOMEeubP5UebuODeQ">
         <bpmn2:dataInput id="_8379A8C0-971A-4344-B6AF-F07DC447D060_correlationIdInputX" drools:dtype="String" itemSubjectRef="__8379A8C0-971A-4344-B6AF-F07DC447D060_correlationIdInputXItem" name="correlationId"/>
         <bpmn2:dataInput id="_8379A8C0-971A-4344-B6AF-F07DC447D060_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
-        <bpmn2:dataOutput id="_8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputX" drools:dtype="belfius.gejb.processorchestrator.openapi.client.model.DecisionResource" itemSubjectRef="__8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputXItem" name="loanGrantingBusinessDecision"/>
+        <bpmn2:dataOutput id="_8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputX" drools:dtype="belfius.gejb.processorchestrator.openapi.model.DecisionResource" itemSubjectRef="__8379A8C0-971A-4344-B6AF-F07DC447D060_loanGrantingBusinessDecisionOutputXItem" name="loanGrantingBusinessDecision"/>
         <bpmn2:inputSet id="_uKneCcOMEeubP5UebuODeQ">
           <bpmn2:dataInputRefs>_8379A8C0-971A-4344-B6AF-F07DC447D060_correlationIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_8379A8C0-971A-4344-B6AF-F07DC447D060_TaskNameInputX</bpmn2:dataInputRefs>
